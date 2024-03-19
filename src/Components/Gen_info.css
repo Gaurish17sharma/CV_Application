@@ -1,0 +1,103 @@
+form {
+    max-width: 400px;
+    margin: 0px auto;
+    padding: 30px;
+    border: 1px solid #e0b9b9;
+    border-radius: 8px;
+    background: #ffefef;
+    box-shadow: 5px -2px 5px 2px rgb(0 0 0 / 30%);
+    position:relative;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    margin-top: 5px;
+    text-shadow: 1px 1px 1px #000000;
+    
+
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0b9b9;
+    border-radius: 5px;
+  }
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #df6b6b;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 10px;
+    
+  }
+
+
+input:hover {
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.94);
+}
+
+button:hover {
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.94);
+}
+
+.title{
+  text-shadow: 1px 1px 1px #000000;
+  font-size: 25px;
+  text-align: center;
+  margin-right: 30px;
+}
+
+.title:hover {
+  cursor: pointer;
+}
+
+form:hover {
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.94);
+
+}
+
+.title-bar {
+  display: flex;
+  flex-direction: row;
+}
+
+.small-icon{
+  width:30px;
+  margin-left: 10px;
+}
+
+.small-icon:hover{
+  cursor: pointer;
+}
+
+.page{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.small-icon-arrow{
+  width:50px;
+  height: 50px;
+  box-shadow: 5px -2px 5px 2px rgb(0 0 0 / 30%);
+  border-radius: 14px;
+  margin: auto;
+}
+
+.small-icon-arrow:hover{
+  cursor: pointer;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.94);
+
+}
