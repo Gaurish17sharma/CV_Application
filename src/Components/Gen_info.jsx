@@ -10,7 +10,7 @@ import {
 }
     from "react-accessible-accordion";
 
-export default function Multiple({ setToEduMode , formData}) {
+export default function Gen_info({ setToEduMode, formData, setFormData }) {
     const [disableButtons, setDisableButtons] = useState(false);
 
     const handleChange = (event) => {
@@ -103,7 +103,7 @@ export default function Multiple({ setToEduMode , formData}) {
                         </AccordionItem>
                     </Accordion>
                 </form>
-                <img src="arrow-right.png" className="small-icon-arrow" alt="arrow-right" onClick={() => { setToEduMode() }}/>
+                <img src="arrow-right.png" className="small-icon-arrow" alt="arrow-right" onClick={() => { setToEduMode() }} />
 
             </div>
 

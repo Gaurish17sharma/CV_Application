@@ -9,7 +9,7 @@ import {
     from "react-accessible-accordion";
 
 
-export default function Edu_info({ setToExpMode, setToGenMode , eduData }) {
+export default function Edu_info({ setToExpMode, setToGenMode , eduData, setEduData}) {
     const [disableButtons, setDisableButtons] = useState(false);
 
     const handleEduChange = (event) => {

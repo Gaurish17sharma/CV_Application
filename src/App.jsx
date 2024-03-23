@@ -38,15 +38,34 @@ function App() {
       <div className="Container">
         <h1>CV APPLICATION</h1>
         {mode == "gen" ? (
-          <Gen_info setToEduMode={setToEduMode} formData = {formData}/>
+          <Gen_info setToEduMode={setToEduMode}
+            formData={formData}
+            setFormData={setFormData}
+          />
         ) : mode == "edu" ? (
-          <Edu_info setToExpMode={setToExpMode} setToGenMode={setToGenMode} eduData = {eduData} />
+          <Edu_info setToExpMode={setToExpMode}
+            setToGenMode={setToGenMode}
+            eduData={eduData}
+            setEduData={setEduData}
+          />
         ) : mode == "exp" ? (
-          <Exp_info setToSklMode={setToSklMode} setToEduMode = {setToEduMode} expData={expData}/>
+          <Exp_info setToSklMode={setToSklMode}
+            setToEduMode={setToEduMode}
+            expData={expData}
+            setexpData={setexpData}
+          />
         ) : mode == "skl" ? (
-          <Skill_info setToDspMode={setToDspMode} setToExpMode = {setToExpMode} skillData={skillData}/>
+          <Skill_info setToDspMode={setToDspMode}
+            setToExpMode={setToExpMode}
+            skillData={skillData}
+            setskillData={setskillData}
+          />
         ) : (
-          <Display_info formData = {formData}/>
+          <Display_info formData={formData}
+            eduData={eduData}
+            expData={expData}
+            skillData={skillData}
+          />
         )}
 
       </div>
