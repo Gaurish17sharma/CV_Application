@@ -9,8 +9,7 @@ import {
     from "react-accessible-accordion";
 
 
-export default function Skill_info({ setToDspMode, setToExpMode }) {
-    const [skillData, setskillData] = useState({ skill_gp_name: "", skills: "" });
+export default function Skill_info({ setToDspMode, setToExpMode, skillData}) {
     const [disableButtons, setDisableButtons] = useState(false);
 
     const handleSkillChange = (event) => {

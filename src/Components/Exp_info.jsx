@@ -8,8 +8,7 @@ import {
 }
     from "react-accessible-accordion";
 
-export default function Exp_info({ setToSklMode, setToEduMode }) {
-    const [expData, setexpData] = useState({ c_name: "", location: "", st_dt: "", ed_dt: "", jb_title: "", jb_desc: "" });
+export default function Exp_info({ setToSklMode, setToEduMode, expData}) {
     const [disableButtons, setDisableButtons] = useState(false);
 
     const handleExpChange = (event) => {

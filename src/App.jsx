@@ -8,6 +8,10 @@ import Display_info from './Components/Display_info';
 
 function App() {
   const [mode, setMode] = useState("gen");
+  const [formData, setFormData] = useState({ name: "", email: "", phno: "", location: "", github: "" });
+  const [eduData, setEduData] = useState({ school: "", location: "", degree: "", grad_date: "", spec: "" });
+  const [expData, setexpData] = useState({ c_name: "", location: "", st_dt: "", ed_dt: "", jb_title: "", jb_desc: "" });
+  const [skillData, setskillData] = useState({ skill_gp_name: "", skills: "" });
 
   function setToEduMode() {
     setMode("edu");
@@ -34,15 +38,15 @@ function App() {
       <div className="Container">
         <h1>CV APPLICATION</h1>
         {mode == "gen" ? (
-          <Gen_info setToEduMode={setToEduMode} />
+          <Gen_info setToEduMode={setToEduMode} formData = {formData}/>
         ) : mode == "edu" ? (
-          <Edu_info setToExpMode={setToExpMode} setToGenMode={setToGenMode} />
+          <Edu_info setToExpMode={setToExpMode} setToGenMode={setToGenMode} eduData = {eduData} />
         ) : mode == "exp" ? (
-          <Exp_info setToSklMode={setToSklMode} setToEduMode = {setToEduMode}/>
+          <Exp_info setToSklMode={setToSklMode} setToEduMode = {setToEduMode} expData={expData}/>
         ) : mode == "skl" ? (
-          <Skill_info setToDspMode={setToDspMode} setToExpMode = {setToExpMode}/>
+          <Skill_info setToDspMode={setToDspMode} setToExpMode = {setToExpMode} skillData={skillData}/>
         ) : (
-          <Display_info />
+          <Display_info formData = {formData}/>
         )}
 
       </div>

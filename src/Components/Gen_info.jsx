@@ -10,8 +10,7 @@ import {
 }
     from "react-accessible-accordion";
 
-export default function Multiple({ setToEduMode }) {
-    const [formData, setFormData] = useState({ name: "", email: "", phno: "", location: "", github: "" });
+export default function Multiple({ setToEduMode , formData}) {
     const [disableButtons, setDisableButtons] = useState(false);
 
     const handleChange = (event) => {

@@ -1,6 +1,8 @@
-export default function Display() {
+export default function Display({formData}) {
     return(
-        <div className="">
+        <div className="Gen_info">
+            <h1>{formData.name}</h1>
+            <h1>hi</h1>
             
         </div>
     )
