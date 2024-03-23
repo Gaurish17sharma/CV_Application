@@ -8,13 +8,12 @@ import {
 }
     from "react-accessible-accordion";
 
-
 export default function Edu_info({ setToExpMode, setToGenMode , eduData, setEduData}) {
     const [disableButtons, setDisableButtons] = useState(false);
 
     const handleEduChange = (event) => {
-        const { school, value } = event.target;
-        setEduData((prevEduData) => ({ ...prevEduData, [school]: value }));
+        const { name, value } = event.target;
+        setEduData((prevEduData) => ({ ...prevEduData, [name]: value }));
     };
 
     const handleEduSubmit = (event) => {
@@ -37,7 +36,6 @@ export default function Edu_info({ setToExpMode, setToGenMode , eduData, setEduD
     const setGenMode = () => {
         setToGenMode();
     }
-
 
     return (
         <>
@@ -90,7 +88,6 @@ export default function Edu_info({ setToExpMode, setToGenMode , eduData, setEduD
                                         value={eduData.grad_date}
                                         onChange={handleEduChange}
                                         disabled={disableButtons} />
-
                                 </div>
 
                                 <label htmlFor="spec">Specialization:</label>
@@ -107,7 +104,6 @@ export default function Edu_info({ setToExpMode, setToGenMode , eduData, setEduD
                             </AccordionItemPanel>
                         </AccordionItem>
                     </Accordion>
-
                 </form>
                 <img src="arrow-right.png" className="small-icon-arrow" alt="arrow-right" onClick={setExpMode} />
 

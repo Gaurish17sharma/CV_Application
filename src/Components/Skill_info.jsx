@@ -8,20 +8,18 @@ import {
 }
     from "react-accessible-accordion";
 
-
-export default function Skill_info({ setToDspMode, setToExpMode, skillData ,setskillData}) {
+export default function Skill_info({ setToStyleMode, setToExpMode, skillData ,setskillData}) {
     const [disableButtons, setDisableButtons] = useState(false);
 
     const handleSkillChange = (event) => {
-        const { skill_gp_name, value } = event.target;
-        setskillData((prevskillData) => ({ ...prevskillData, [skill_gp_name]: value }));
+        const { name, value } = event.target;
+        setskillData((prevskillData) => ({ ...prevskillData, [name]: value }));
     };
 
     const handleSkillSubmit = (event) => {
         event.preventDefault();
         console.log(skillData);
     };
-
 
     const disablebtnstrue = () => {
         setDisableButtons(true);
@@ -31,8 +29,8 @@ export default function Skill_info({ setToDspMode, setToExpMode, skillData ,sets
         setDisableButtons(false);
     };
 
-    const setDspMode = () => {
-        setToDspMode();
+    const setStyleMode = () => {
+        setToStyleMode();
     }
 
     const setExpMode = () => {
@@ -80,8 +78,7 @@ export default function Skill_info({ setToDspMode, setToExpMode, skillData ,sets
                     </Accordion>
 
                 </form>
-                <img src="arrow-right.png" className="small-icon-arrow" alt="arrow-right" onClick={setDspMode} />
-
+                <img src="arrow-right.png" className="small-icon-arrow" alt="arrow-right" onClick={setStyleMode} />
             </div>
         </>
     )

@@ -12,8 +12,8 @@ export default function Exp_info({ setToSklMode, setToEduMode, expData ,setexpDa
     const [disableButtons, setDisableButtons] = useState(false);
 
     const handleExpChange = (event) => {
-        const { c_name, value } = event.target;
-        setexpData((prevexpData) => ({ ...prevexpData, [c_name]: value }));
+        const { name, value } = event.target;
+        setexpData((prevexpData) => ({ ...prevexpData, [name]: value }));
     };
 
     const handleExpSubmit = (event) => {

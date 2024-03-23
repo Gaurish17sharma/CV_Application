@@ -1,6 +1,5 @@
 import { useState } from "react";
 import './Gen_info.css';
-
 import {
     Accordion,
     AccordionItem,
@@ -30,7 +29,6 @@ export default function Gen_info({ setToEduMode, formData, setFormData }) {
     const disablebtnsfalse = () => {
         setDisableButtons(false);
     };
-
 
     return (
         <>
@@ -84,7 +82,6 @@ export default function Gen_info({ setToEduMode, formData, setFormData }) {
                                         value={formData.location}
                                         onChange={handleChange}
                                         disabled={disableButtons} />
-
                                 </div>
 
                                 <label htmlFor="github">Github:</label>
@@ -104,9 +101,7 @@ export default function Gen_info({ setToEduMode, formData, setFormData }) {
                     </Accordion>
                 </form>
                 <img src="arrow-right.png" className="small-icon-arrow" alt="arrow-right" onClick={() => { setToEduMode() }} />
-
             </div>
-
         </>
     );
 }

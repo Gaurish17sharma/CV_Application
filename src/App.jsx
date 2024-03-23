@@ -5,6 +5,7 @@ import Edu_info from "./Components/Edu_info";
 import Exp_info from './Components/Exp_info';
 import Skill_info from './Components/Skill_info';
 import Display_info from './Components/Display_info';
+import Styling from './Components/Styling';
 
 function App() {
   const [mode, setMode] = useState("gen");
@@ -12,6 +13,7 @@ function App() {
   const [eduData, setEduData] = useState({ school: "", location: "", degree: "", grad_date: "", spec: "" });
   const [expData, setexpData] = useState({ c_name: "", location: "", st_dt: "", ed_dt: "", jb_title: "", jb_desc: "" });
   const [skillData, setskillData] = useState({ skill_gp_name: "", skills: "" });
+  const [style, setStyle] = useState("Harvard");
 
   function setToEduMode() {
     setMode("edu");
@@ -31,6 +33,10 @@ function App() {
 
   function setToGenMode() {
     setMode("gen");
+  }
+
+  function setToStyleMode() {
+    setMode("style");
   }
 
   return (
@@ -55,10 +61,16 @@ function App() {
             setexpData={setexpData}
           />
         ) : mode == "skl" ? (
-          <Skill_info setToDspMode={setToDspMode}
+          <Skill_info setToStyleMode={setToStyleMode}
             setToExpMode={setToExpMode}
             skillData={skillData}
             setskillData={setskillData}
+          />
+        ) : mode == "style" ? (
+          <Styling setToDspMode={setToDspMode}
+            setToSklMode={setToSklMode}
+            style={style}
+            setStyle={setStyle}
           />
         ) : (
           <Display_info formData={formData}

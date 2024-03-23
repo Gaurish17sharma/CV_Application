@@ -19,8 +19,6 @@ form {
     font-family: sans-serif;
     margin-top: 5px;
     text-shadow: 1px 1px 1px #000000;
-    
-
   }
 
   input,
@@ -39,8 +37,7 @@ form {
     color: #fff;
     font-size: 1rem;
     cursor: pointer;
-    margin-right: 10px;
-    
+    margin-right: 10px;    
   }
 
 
@@ -100,5 +97,4 @@ form:hover {
 .small-icon-arrow:hover{
   cursor: pointer;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.94);
-
 }
